@@ -15,7 +15,6 @@
 
 }
 
-
 body {
 
     background-image: linear-gradient(to right, var(--gradient1), var(--gradient2));
@@ -150,8 +149,36 @@ footer {
 
 }
 
-    footer img {
+    footer a{
 
-        width: 100px;
+        text-decoration: none;
 
     }
+
+    footer img {
+
+        width: 1.5rem;
+
+    }
+
+.footer-content {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.footer-content > span {
+
+    color: white;
+
+}
+
+.footer-content:hover {
+
+    transition: 0.1s ease-in;
+    transform: scale(1.10);
+
+}
+
