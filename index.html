@@ -19,29 +19,29 @@
                 <div class="inputForm">
                     <label for="personQty">Quantas pessoas serão?</label>
                     <input type="number" name="personQty" id="personQty" min="15" placeholder="Mín: 15 pessoas" required>
-                    <label class="errorMsg" id="errorQty"></label>
+                    <span class="errorMsg" id="errorQty"></span>
                 </div>
 
                 <div class="inputForm">
                     <label for="coffeeBudget" class="">Qual o orçamento do Coffee?</label>
                     <input type="number" name="coffeeBudget" id="coffeeBudget" placeholder="Mín: R$516,00" min="516.00" required>
-                    <label class="errorMsg" id="errorBudget"></label>
+                    <span class="errorMsg" id="errorBudget"></span>
 
                 </div>
 
                 <div class="inputForm">
-                    <label for="coffeePriority">Qual o nível de importância desse Coffee?</label>
+                    <span>Qual o nível de importância desse Coffee?</span>
                 
                     <div class="radio-options">
-                        <label for="coffeeLow" class="">
+                        <label for="coffeeLow">
                             <input type="radio" name="coffeePriority" id="coffeeLow" value="Low" required>
                             Baixo
                         </label>
-                        <label for="coffeeMid" class="">
+                        <label for="coffeeMid">
                             <input type="radio" name="coffeePriority" id="coffeeMid" value="Mid">
                             Médio
                         </label>
-                        <label for="coffeeHigh" class="">
+                        <label for="coffeeHigh">
                             <input type="radio" name="coffeePriority" id="coffeeHigh" value="High">
                             Alto
                         </label>
@@ -54,7 +54,7 @@
                 </div>
             </div>
         
-            <div class="form-return">
+            <div class="form-return" id="response">
                 <h4>Seu Coffee Ideal é</h4>
                 <hr>
                 <h2 id="coffeeType"></h2>

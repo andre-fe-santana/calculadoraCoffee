@@ -7,12 +7,11 @@ function calculate() {
     const minimumPerPerson = 516/15 // Lowest cost by 15 people having the cheapest option of coffee, which is Petit - Type A
 
     // error Message
-    let errorMsg = document.querySelector('.errorMsg')
-    console.log(errorMsg)
     let errorQty = document.querySelector('#errorQty');
     let errorBudget = document.querySelector('#errorBudget');
 
     // return container
+
     let returnDiv = document.querySelector('.form-return');
     let coffeeType = document.querySelector('#coffeeType');
     let totalCost = document.querySelector('#totalCost');
@@ -24,6 +23,7 @@ function calculate() {
 
     if (personQty < 15) {
 
+        returnDiv.style.display = "none";
         errorQty.style.display = "flex";
         console.log("ERRO! Número de pessoas abaixo do mínimo");
         errorQty.textContent = "Utilize 15 pessoas no mínimo";
@@ -34,14 +34,16 @@ function calculate() {
 
         if (budgetPerPerson < minimumPerPerson) {
 
+            returnDiv.style.display = "none"; 
             errorBudget.style.display = "flex";
             console.log(`Custo Mínimo: ${minimumPerPerson}`);
-            errorBudget.textContent = `Para ${personQty} pessoas, o orçamento mínimo é de R$${minimumPerPerson * personQty}`;
+            errorBudget.textContent = `Para ${personQty} pessoas, o orçamento mínimo é de R$${(minimumPerPerson * personQty).toFixed(2)}`;
             console.log("Passei pelo IF de checagem mínima");
             
         } else {
 
-            errorMsg.style.display = "none"; // removes the error label
+            errorBudget.style.display = "none"; // removes the error label
+            errorQty.style.display = "none"; // removes the error label
             returnDiv.style.display = "flex"; //  displays the response container
 
             // HIGH PRIORITY
