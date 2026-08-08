@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Coffee Break</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <form onchange="calculate()">
+            <div class="form-title">
+                <h2>Qual Coffee Devo Pedir?</h2>
+            </div>
+
+            <div class="form-content">
+                <!-- número de pessoas -->
+                <div class="inputForm">
+                    <label for="personQty">Quantas pessoas serão?</label>
+                    <input type="number" name="personQty" id="personQty" min="15" placeholder="Mín: 15 pessoas" required>
+                    <label class="errorMsg" id="errorQty"></label>
+                </div>
+
+                <div class="inputForm">
+                    <label for="coffeeBudget" class="">Qual o orçamento do Coffee?</label>
+                    <input type="number" name="coffeeBudget" id="coffeeBudget" placeholder="Mín: R$516,00" min="516.00" required>
+                    <label class="errorMsg" id="errorBudget"></label>
+
+                </div>
+
+                <div class="inputForm">
+                    <label for="coffeePriority">Qual o nível de importância desse Coffee?</label>
+                
+                    <div class="radio-options">
+                        <label for="coffeeLow" class="">
+                            <input type="radio" name="coffeePriority" id="coffeeLow" value="Low" required>
+                            Baixo
+                        </label>
+                        <label for="coffeeMid" class="">
+                            <input type="radio" name="coffeePriority" id="coffeeMid" value="Mid">
+                            Médio
+                        </label>
+                        <label for="coffeeHigh" class="">
+                            <input type="radio" name="coffeePriority" id="coffeeHigh" value="High">
+                            Alto
+                        </label>
+                    </div>
+                </div>
+
+
+                <div class="form-submit">
+                    <!-- <input type="button" value="Calcular"> -->
+                </div>
+            </div>
+        
+            <div class="form-return">
+                <h4>Seu Coffee Ideal é</h4>
+                <hr>
+                <h2 id="coffeeType"></h2>
+                <h4 id="totalCost"></h4>
+                <span id="individualCost"></span>
+                
+            </div>
+
+        </form>
+    </main>
+
+    <footer>
+        <img src="img/logotipo-globo.png" alt="Logotipo da Globo" draggable="false">
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

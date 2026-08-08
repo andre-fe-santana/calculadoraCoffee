@@ -1,0 +1,157 @@
+:root {
+
+    font-family: "Globotipo Corporativa", sans-serif;
+    color: black;
+
+    --gradient1: #05A6FF;
+    --gradient2: #8800F8;
+    --errorMsg: #FF0C1F;
+}
+
+* {
+
+    margin: 0;
+    padding: 0;
+
+}
+
+
+body {
+
+    background-image: linear-gradient(to right, var(--gradient1), var(--gradient2));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+}
+
+/* FORMULARIO */
+
+main {
+
+    background-color: white;
+    padding: 24px 24px;
+    width: 300px;
+    border-radius: 12px;
+}
+
+main .form-title {
+
+    text-align: center;
+    margin-bottom: 36px;
+    text-transform: capitalize;
+
+}
+
+main .form-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+}
+
+main .inputForm{
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+}
+
+input[type="number"]{
+
+    padding: 16px 16px;
+    box-shadow: 0px 5px 30px 10px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 12px;
+
+}
+
+.input-importance {
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.radio-options {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.form-submit input{
+
+    width: 100%;
+    background-image: linear-gradient(to right, var(--gradient1), var(--gradient2));
+    padding: 16px 8px;
+    text-transform: uppercase;
+    color: white;
+    border: none;
+    box-shadow: 0px 5px 30px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.form-submit input:hover {
+
+    transition: 0.2s ease-in;
+    transform: scale(1.01);
+    cursor: pointer;
+    
+}
+
+.errorMsg{
+    display: none;
+    font-size: 0.7em;
+    color: var(--errorMsg);
+    font-weight: bold;
+}
+
+/* RESPOSTA DO FORMULÁRIO */
+
+.form-return {
+
+    display: none;
+    flex-direction: column;
+    margin-top: 24px;
+    text-align: center;
+    transition: 0.5s ease-in-out;
+}
+
+.form-return hr {
+
+    margin: 4px 0;
+
+}
+
+.form-return #coffeeType {
+
+    background: linear-gradient(to right, var(--gradient1), var(--gradient2));
+    background-clip: text;
+    color: transparent;
+    padding: 8px 0;
+}
+
+
+/* FOOTER */
+
+footer {
+ 
+    max-width: 100%;
+    padding: 36px 0;
+    display: flex;
+    align-items: center;
+    align-content: center;
+
+}
+
+    footer img {
+
+        width: 100px;
+
+    }
