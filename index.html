@@ -9,61 +9,59 @@
 </head>
 <body>
     <main>
-        <form onchange="calculate()">
-            <div class="form-title">
-                <h2>Qual Coffee Devo Pedir?</h2>
-            </div>
 
-            <div class="form-content">
-                <!-- número de pessoas -->
-                <div class="inputForm">
-                    <label for="personQty">Quantas pessoas serão?</label>
-                    <input type="number" name="personQty" id="personQty" min="15" placeholder="Mín: 15 pessoas" required>
-                    <span class="errorMsg" id="errorQty"></span>
-                </div>
-
-                <div class="inputForm">
-                    <label for="coffeeBudget" class="">Qual o orçamento do Coffee?</label>
-                    <input type="number" name="coffeeBudget" id="coffeeBudget" placeholder="Mín: R$516,00" min="516.00" required>
-                    <span class="errorMsg" id="errorBudget"></span>
-
-                </div>
-
-                <div class="inputForm">
-                    <span>Qual o nível de importância desse Coffee?</span>
-                
-                    <div class="radio-options">
-                        <label for="coffeeLow">
-                            <input type="radio" name="coffeePriority" id="coffeeLow" value="Low" required>
-                            Baixo
-                        </label>
-                        <label for="coffeeMid">
-                            <input type="radio" name="coffeePriority" id="coffeeMid" value="Mid">
-                            Médio
-                        </label>
-                        <label for="coffeeHigh">
-                            <input type="radio" name="coffeePriority" id="coffeeHigh" value="High">
-                            Alto
-                        </label>
+        <div id="flip-card">
+            <form id="flip-card-inner">
+                <div class="form-content" id="cardFront">
+                    <div class="form-title">
+                        <h2>Qual Coffee Devo Pedir?</h2>
+                    </div>
+                    <!-- número de pessoas -->
+                    <div class="inputForm">
+                        <label for="personQty">Quantas pessoas serão?</label>
+                        <input type="number" name="personQty" id="personQty" min="15" placeholder="Mín: 15 pessoas" required>
+                        <span class="errorMsg" id="errorQty"></span>
+                    </div>
+                    <div class="inputForm">
+                        <label for="coffeeBudget" class="">Qual o orçamento do Coffee?</label>
+                        <input type="number" name="coffeeBudget" id="coffeeBudget" placeholder="Mín: R$516,00" min="516.00" required>
+                        <span class="errorMsg" id="errorBudget"></span>
+                    </div>
+                    <div class="inputForm">
+                        <span>Qual o nível de importância desse Coffee?</span>
+            
+                        <div class="radio-options">
+                            <label for="coffeeLow">
+                                <input type="radio" name="coffeePriority" id="coffeeLow" value="Low" required>
+                                Baixo
+                            </label>
+                            <label for="coffeeMid">
+                                <input type="radio" name="coffeePriority" id="coffeeMid" value="Mid">
+                                Médio
+                            </label>
+                            <label for="coffeeHigh">
+                                <input type="radio" name="coffeePriority" id="coffeeHigh" value="High">
+                                Alto
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-submit">
+                        <input type="button" value="Calcular" onclick="calculate()">
                     </div>
                 </div>
+                <div class="form-return" id="cardBack">
+                    <h4 id="coffeeTitle">Seu Coffee Ideal é</h4>
+                    <h1 id="coffeeType"></h1>
+                    <h4 id="totalCost"></h4>
+                    <span id="individualCost"></span>
 
-
-                <div class="form-submit">
-                    <!-- <input type="button" value="Calcular"> -->
+                    <label onclick="reset()" id="btn-reset">
+                        <img src="img/restart.svg" alt="Resetar aplicação">
+                    </label>
+            
                 </div>
-            </div>
-        
-            <div class="form-return" id="response">
-                <h4>Seu Coffee Ideal é</h4>
-                <hr>
-                <h2 id="coffeeType"></h2>
-                <h4 id="totalCost"></h4>
-                <span id="individualCost"></span>
-                
-            </div>
-
-        </form>
+            </form>
+        </div>
     </main>
 
     <footer>
