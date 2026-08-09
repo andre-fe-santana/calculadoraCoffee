@@ -1,22 +1,33 @@
+//form data
+let personQtyInput = document.getElementById('personQty')
+let budgetInput = document.getElementById('coffeeBudget')
+
+// error Message
+let errorQty = document.querySelector('#errorQty');
+let errorBudget = document.querySelector('#errorBudget');
+
+// return container
+
+let returnDiv = document.querySelector('.form-return');
+let coffeeType = document.querySelector('#coffeeType');
+let totalCost = document.querySelector('#totalCost');
+let individualCost = document.querySelector('#individualCost');
+
+//card Effect
+
+let cardInner = document.querySelector("#flip-card-inner")
+let cardFront = document.querySelector('#cardFront')
+let cardBack = document.querySelector('#cardBack')
+
+
 function calculate() {
-    //form data
-    let personQty = Number(document.getElementById('personQty').value)
-    let budget = parseFloat(document.getElementById('coffeeBudget').value)
+
+    let personQty = Number(personQtyInput.value)
+    let budget = parseFloat(budgetInput.value)
     let priority = document.querySelector('input[name="coffeePriority"]:checked').value;
+
     const budgetPerPerson = budget / personQty;
-    const minimumPerPerson = 516/15 // Lowest cost by 15 people having the cheapest option of coffee, which is Petit - Type A
-
-    // error Message
-    let errorQty = document.querySelector('#errorQty');
-    let errorBudget = document.querySelector('#errorBudget');
-
-    // return container
-
-    let returnDiv = document.querySelector('.form-return');
-    let coffeeType = document.querySelector('#coffeeType');
-    let totalCost = document.querySelector('#totalCost');
-    let individualCost = document.querySelector('#individualCost');
-
+    const minimumPerPerson = 516 / 15 // Lowest cost by 15 people having the cheapest option of coffee, which is Petit - Type A
 
     console.log(`Qtd de Pessoas: ${personQty} (${typeof (personQty)}) | Orçamento: R$${budget} (${typeof (budget)}) | Prioridade: ${priority} (${typeof(priority)})`);    
     console.log(`Orçamento por Pessoa: R$${budgetPerPerson}`)
@@ -42,9 +53,13 @@ function calculate() {
             
         } else {
 
+            returnDiv.style.display = "flex";
             errorBudget.style.display = "none"; // removes the error label
             errorQty.style.display = "none"; // removes the error label
-            returnDiv.style.display = "flex"; //  displays the response container
+
+            // 3D card effect
+            cardInner.style.transform = "rotateY(180deg)";
+        
 
             // HIGH PRIORITY
             if (priority == "High") {
@@ -175,4 +190,13 @@ function calculate() {
         }
 
     }
+}
+
+function reset() {
+
+    personQtyInput.value = "";
+    budgetInput.value = "";
+
+    cardInner.style.transform = "rotateY(0deg)";
+
 }
