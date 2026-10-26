@@ -6,6 +6,7 @@
     <title>Calculadora de Coffee Break</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
 </head>
 <body>
     <main>
@@ -16,19 +17,31 @@
                     <div class="form-title">
                         <h2>Qual Coffee Devo Pedir?</h2>
                     </div>
+
+                    <hr>
+
                     <!-- número de pessoas -->
                     <div class="inputForm">
-                        <label for="personQty">Quantas pessoas serão?</label>
+                        <label for="personQty">
+                            <i class="fa-solid fa-people-group"></i>
+                            Quantas pessoas serão?
+                        </label>
                         <input type="number" name="personQty" id="personQty" min="15" placeholder="Mín: 15 pessoas" required>
                         <span class="errorMsg" id="errorQty"></span>
                     </div>
                     <div class="inputForm">
-                        <label for="coffeeBudget" class="">Qual o orçamento do Coffee?</label>
+                        <label for="coffeeBudget" class="">
+                            <i class="fa-solid fa-money-bill-1-wave"></i>
+                            Qual o orçamento do Coffee?
+                        </label>
                         <input type="number" name="coffeeBudget" id="coffeeBudget" placeholder="Mín: R$516,00" min="516.00" required>
                         <span class="errorMsg" id="errorBudget"></span>
                     </div>
                     <div class="inputForm">
-                        <span>Qual o nível de importância desse Coffee?</span>
+                        <label>
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                            Qual o nível de importância desse Coffee?
+                        </label>
             
                         <div class="radio-options">
                             <label for="coffeeLow">
